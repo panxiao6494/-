@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <title>中信期货祝您新春快乐</title>
+
+    <script>
+      (function(win, doc) {
+        if (!win.addEventListener) return;
+        var html = document.documentElement;
+
+        function setFont() {
+          var html = document.documentElement;
+          console.log(html.clientWidth, "宽度");
+          // 配置html字体rem
+          // 50px  = 1rem 在根元素（html font-size = 50px的时候）
+          var k = 750;
+          html.style.fontSize = (html.clientWidth / k) * 100 + "px";
+        }
+        setFont();
+        setTimeout(function() {
+          setFont();
+        }, 300);
+        doc.addEventListener("DOMContentLoaded", setFont, false);
+        win.addEventListener("resize", setFont, false);
+        win.addEventListener("load", setFont, false);
+      })(window, document);
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .mod_loading .content .progress span {
+        -webkit-transition: width 0.4s linear;
+      }
+    </style>
+  </head>
+
+  <body class="bodybox">
+    <div class="loding">
+      <div>loading...</div>
+    </div>
+    <div class="wrap" id="wrap" style="display: none;">
+      <div class="item item-1">
+        <div class="box">
+          <img
+            src="./image/36.jfif"
+            alt=""
+            style="width: 100%;height:100%;position: absolute;"
+          />
+          <img
+            src="./image/dl.png"
+            alt=""
+            style="display: none;"
+            class="delo"
+          />
+          <img src="./image/Bg2.png" alt="" class="bg2" />
+          <img
+            src="./image/ggd.gif"
+            alt=""
+            style="position: absolute;width: 100%;"
+          />
+          <div class="shu">
+            <img src="./image/54.png" alt="" />
+            <img src="./image/gongxi.png" alt="" id="imgh" />
+          </div>
+          <img src="./image/wushi.png" alt="" class="shi" />
+          <img
+            src="./image/ggd.gif"
+            alt=""
+            style="position: absolute;width: 100%;height: 100%;"
+          />
+          <div class="topl" style="display: none;">
+            <img src="./image/1.png" alt=""  id="top1"/>
+            <img src="./image/2.png" alt="" />
+            <img src="./image/3.png" alt="" />
+          </div>
+          <div class="btr" style="display: none;">
+            <img src="./image/1.png" alt="" id="bt2"/>
+            <img src="./image/2.png" alt="" />
+            <img src="./image/3.png" alt="" />
+          </div>
+          <img src="./image/music.png" alt="" class="music_icon" />
+          <!-- <div class="leftn">
+          <span>中</span>
+          <span>信</span>
+          <span>期</span>
+          <span>货</span>
+          <span>祝</span>
+          <span>您</span>
+          <span>新</span>
+          <span>春</span>
+          <span>快</span>
+          <span>乐</span>
+        </div> -->
+          <div class="bottombox">
+            <!-- <div style="font-size: .4rem;font-family: 楷体;">
+            <span>金鼠贺岁</span>
+            <span>庚子迎春</span>
+          </div> -->
+            <img src="./image/log.png" alt="" style="width: 2rem;" />
+          </div>
+          <img src="./image/arrow.png" alt="" class="arrow" />
+        </div>
+      </div>
+
+      <!-- 第二个 -->
+      <div class="item item2" style="overflow: hidden;">
+        <div id="main">
+          <img src="./image/music.png" alt="" class="music_icon" />
+          <img
+            src="./image/arrow.png"
+            alt=""
+            class="arrow"
+            style="bottom: 13vh;"
+          />
+          <audio
+            style="display:none; height: 0"
+            id="bgmusic"
+            preload="auto"
+            src="./pic/pic/bg.mp3"
+            loop="loop"
+            autoplay="autoplay"
+          ></audio>
+          <img class="imgBG" src="./image/bg.png" alt="" />
+          <img src="./image/bgh.png" id="guajian" alt="" class="guajian" />
+          <div class="delobox">
+            <img src="./image/top.png" id="top" class="top" />
+            <img src="./image/china.png" alt="" class="china" />
+            <!-- 灯笼 -->
+            <img class="dl" src="./image/delozu.png" alt="" />
+          
+          </div>
+          <div class="snow-container">
+            <img src="./image/gold.png" alt="" class="jin1" id="jin" />
+            <img src="./image/gold.png" alt="" class="jin2" id="jin" />
+          </div>
+          <!-- 底部标识log -->
+          <div class="content" id="content">
+            <div class="xiaojiebox">
+              <img src="./image/xiaojie.png" alt="" class="xi-l xiaojie" />
+              <img src="./image/xiaojie.png" alt="" class="xi-r xiaojie" />
+            </div>
+           
+            <img src="./image/daji.png" alt="" class="liunian" />
+            <img src="./image/font.png" alt="" class="font" />
+            <img src="./image/cloud.png" alt="" class="cloud" />
+            <img
+              src="./image/monse-cl.png"
+              id="monsecl"
+              alt=""
+              class="footer"
+            />
+            <div class="zhufuyu">
+              <p>{{name1}}祝您:</p>
+              <p v-for="(item,index) in name2Array" :key="index">{{item}}</p>
+            </div>
+          </div>
+          <a href="./editword.html" id="newHK" class="newHK">
+            制作我的贺卡
+          </a>
+        </div>
+      </div>
+<!-- 第三个页面 -->
+      <div class="item item3" style="overflow: hidden;">
+        <div class="centerzhu">
+          <img src="./image/654.png" alt="">
+        </div>
+        <img src="./image/music.png" alt="" class="music_icon" />
+        <img src="./image/biao.png" alt="" style="position: absolute;width: 100%;height: 100%;" />
+        <img
+          src="./image/ggd.gif"
+          alt=""
+          style="position: absolute;width: 100%;height: 100%;"
+        />
+        <img src="./image/treen.png" alt="" class="toptree" />
+        <img src="./image/goldlog.png" alt="" class="btlog">
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./js/iSlider.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script src="js/vue.js"></script>
+    <script>
+      var loader = function(complete) {
+        //图片资源加载完毕才显示main
+        var source = [
+          "image/dl.png",
+          "image/Bg2.png",
+          "image/ggd.gif",
+          "image/bgh.png",
+          "image/gongxi.png",
+          "image/654.png",
+          "image/wushi.png",
+          "image/bg.png",
+          "image/1.png",
+          "image/2.png",
+          "image/arrow.png",
+          "image/treen.png",
+          "image/guajian.png",
+          "image/top.png",
+          "image/china.png",
+          "image/denglong.png",
+          "image/xiaojie.png",
+          "image/center.png",
+          "image/daji.png",
+          "image/font.png",
+          "image/fu.png",
+          "image/cloud.png",
+          "image/monse-cl.png"
+        ];
+        var count = 0;
+
+        load = function(o, f) {
+          if (
+            o.indexOf(".png") > -1 ||
+            o.indexOf(".jpg") > -1 ||
+            o.indexOf(".gif") > -1
+          ) {
+            var img = new Image();
+            img.src = o;
+            img.onload = img.onerror = f;
+          }
+        };
+
+        for (var i = 0; i < source.length; i++) {
+          load(source[i], function() {
+            count++;
+            if (count == source.length) {
+              complete();
+            }
+          });
+        }
+      };
+      var loadComplete = () => {
+        $(".loding").hide();
+        $("#wrap").show();
+      };
+      loader(loadComplete);
+
+      var addAnimate = function(flag) {
+        if (flag) {
+          $("#top").addClass("bounceInDown animated");
+          $("#monsecl").addClass("bounceInUp animated");
+          $("#newHK").addClass("bounceInUp animated");
+          $("#guajian").addClass("rubberBand animated");
+          $("#content").addClass("bounceIn animated");
+          setTimeout(function() {
+            $("#monsecl").removeClass("bounceInUp animated");
+            $("#monsecl").addClass("pulse animated infinite");
+          }, 600);
+        } else {
+          $("#top").removeClass("bounceInDown animated");
+          $("#monsecl").removeClass("bounceInUp animated");
+          $("#monsecl").removeClass("pulse animated infinite");
+          $("#newHK").removeClass("bounceInUp animated");
+          $("#guajian").removeClass("rubberBand animated");
+          $("#content").removeClass("bounceIn animated");
+        }
+      };
+      var myslider = new iSlider({
+        index: 0,
+        loadingImgs: [],
+        onloading: function(complete, total) {
+         
+        
+        },
+        onslide: function(index) {
+          if(index==0){
+            $('.btr').fadeIn(1200);
+           $('.topl').fadeIn(1200)
+          }
+          if (index == 1) {
+            addAnimate(true);
+            $(".jin1").show();
+            $(".jin2").show();
+            $(".jin1").addClass("snow_an");
+            $(".jin2").addClass("snow_bn");
+          } else {
+            addAnimate(false);
+            $(".jin1").removeClass("snow_an");
+            $(".jin2").removeClass("snow_bn");
+          }
+        }
+      });
+
+      // document.getElementById('bgmusic').play();
+      //微信自动播放
+      document.addEventListener(
+        "WeixinJSBridgeReady",
+        function() {
+          document.getElementById("bgmusic").play();
+        },
+        false
+      );
+
+      $(function() {
+        $("#jin").on("webkitAnimationEnd", function() {
+          console.log("结束");
+          $(".jin1").hide();
+          $(".jin2").hide();
+        });
+        $('.bg2').on('webkitAnimationEnd',function(){
+          $('.topl').fadeIn(500);
+          $('.btr').fadeIn(500);
+          $('.delo').fadeIn(100)
+        })
+        $(".music_icon").on("touchstart", function() {
+          var audio = document.getElementById("bgmusic");
+          if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+        });
+
+        document.body.addEventListener(
+          "touchmove",
+          function(e) {
+            e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+          },
+          {
+            passive: false
+          }
+        ); //passive 参数不能省略，用来兼容ios和android
+
+        let apiHost = "https://www.qyino.com/coupon/";
+        let url = window.location.search;
+        let options = new Object();
+        if (url.indexOf("?") != -1) {
+          let str = url.substr(1);
+          strs = str.split("&");
+          for (let i = 0; i < strs.length; i++) {
+            options[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+          }
+        }
+        console.log(options.key);
+
+        if (options) {
+          $.ajax({
+            url: apiHost + "getZhongxinStr",
+            data: {
+              key: options.key
+            },
+            success: res => {
+              console.log(res);
+              if (res.data) {
+                let str = res.data.split("%");
+                console.log(str);
+                app.key = options.key;
+                app.name1 = str[0];
+                app.name2 = str[1];
+                console.log(str[1].split("\n"));
+                let tmpArray = str[1].split("\n");
+                let array = [];
+                for (let i = 0; i < tmpArray.length; i++) {
+                  if (tmpArray[i]) {
+                    array.push(tmpArray[i]);
+                  }
+                }
+                console.log(array);
+                app.name2Array = array;
+              }
+            }
+          });
+        }
+
+        $.ajax({
+          url: apiHost + "getJsapiConfig",
+          data: {
+            url: window.location.href
+          },
+          success: res => {
+            console.log(res);
+            wx.config({
+              debug: false, // 开启调试模式
+              appId: "wx57b343c8e4dafd12", // 必填，公众号的唯一标识
+              timestamp: res.data.timestamp, // 必填，生成签名的时间戳
+              nonceStr: res.data.noncestr, // 必填，生成签名的随机串
+              signature: res.data.signature, // 必填，签名
+              jsApiList: res.data.jsApiList // 必填，需要使用的JS接口列表
+            });
+          }
+        });
+      });
+
+      var app = new Vue({
+        el: "#main",
+        data: {
+          key: "",
+          isLoad: true,
+          name1: "",
+          name2: "身体健康,万事如意,阖家幸福,鼠年大吉!",
+          name2Array: ["身体健康", "万事如意", "阖家幸福", "鼠年大吉!"]
+        },
+        methods: {
+         
+        }
+      });
+
+    var app = new Vue({
+      el: "#main",
+      data: {
+        key: "",
+        isLoad: true,
+        name1: "",
+        name2: "鼠不尽的健康，鼠不尽的财富，鼠不尽的幸福，如期而至!",
+        name2Array: ["鼠不尽的健康", "鼠不尽的财富", "鼠不尽的幸福", "如期而至!"]
+      },
+      methods: {
+        toMyHk: function () {
+          window.location.href = "./editword.html";
+        }
+      }
+    });
+
+    //自定义“分享给朋友”及“分享到QQ”按钮的分享内容（1.4.0）
+    wx.ready(function () {
+      //需在用户可能点击分享按钮前就先调用
+      /*wx.updateAppMessageShareData({
+     title: app.name1 + '送给您的新春祝福', // 分享标题
+     desc: '送给您的新春祝福', // 分享描述
+     link: 'https://www.qyino.com/greetingcard/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+     imgUrl: 'https://www.qyino.com/greetingcard/image/logo1.png', // 分享图标
+     success: function () {
+        // 设置成功
+        alert("成功"+app.name1)
+     }
+   });
+   
+   wx.updateTimelineShareData({
+     title: app.name1 + '送给您的新春祝福', // 分享标题
+     desc: '送给您的新春祝福', // 分享描述
+     link: 'https://www.qyino.com/greetingcard/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+     imgUrl: 'https://www.qyino.com/greetingcard/image/logo1.png', // 分享图标
+     success: function () {
+        // 设置成功
+        alert("成功"+app.name1)
+     }
+   });*/
+
+        let obj = {
+          title: app.name1 + "送给您的新春祝福", // 分享标题
+          desc: "祝您" + app.name2, // 分享描述
+          link: "https://www.qyino.com/greetingcard/index.html?key=" + app.key, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+          imgUrl: "https://www.qyino.com/greetingcard/image/logo1.png", // 分享图标
+          success: function() {
+            // 设置成功
+          }
+        };
+        document.getElementById("bgmusic").play();
+        wx.onMenuShareTimeline(obj);
+
+        wx.onMenuShareAppMessage(obj);
+
+        wx.onMenuShareQQ(obj);
+
+        wx.onMenuShareWeibo(obj);
+
+        wx.onMenuShareQZone(obj);
+      });
+    </script>
+  </body>
+</html>
